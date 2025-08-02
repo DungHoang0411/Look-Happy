@@ -1,0 +1,103 @@
+/* Thiết lập cơ bản cho body */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+/* --- VIDEO NỀN --- */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+#background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* --- THANH HEADER --- */
+header {
+    background-color: rgba(22, 22, 22, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 0 2%;
+    position: fixed;
+    top: 0;
+    width: 96%;
+    z-index: 100;
+    height: 65px;
+    display: flex;
+    justify-content: flex-start; /* Thay đổi từ space-between sang flex-start */
+    align-items: center;
+}
+
+/* --- Các phần của Header --- */
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-nav {
+    margin-left: 70px; /* Thêm khoảng cách bên trái để đẩy nav sang phải 1 chút */
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: auto; /* Tự động đẩy phần bên phải vềสุดขอบ */
+}
+
+.header-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 40px; 
+    margin-left:100px;
+}
+
+/* --- Định dạng chung cho các liên kết --- */
+.header-nav a, .login-link {
+    color: #f0f0f0;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.header-nav a:hover, .login-link:hover {
+    color: #ffffff;
+}
+
+/* Logo bên trái */
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Icon cá nhân bên phải */
+.profile-icon i {
+    font-size: 24px;
+    vertical-align: middle;
+    color: #f0f0f0;
+}
+
+/* --- NỘI DUNG CHÍNH --- */
+.content {
+    padding-top: 65px;
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+}
