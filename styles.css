@@ -3,7 +3,31 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
+    background-color: #000; /* Thêm nền đen để dễ thấy hiệu ứng */
+    overflow: hidden; /* Ngăn cuộn trang do các hạt tạo ra */
 }
+
+/* --- HIỆU ỨNG TINH TÚ --- */
+.star {
+    position: fixed;
+    background-color: white;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    animation: fade-out 1s forwards;
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+    to {
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+
 
 /* --- VIDEO NỀN --- */
 .video-background {
@@ -14,6 +38,7 @@ body, html {
     height: 100%;
     z-index: -1;
     overflow: hidden;
+    opacity: 0.7; /* Giảm độ sáng video để nổi bật hiệu ứng */
 }
 
 #background-video {
@@ -34,7 +59,7 @@ header {
     z-index: 100;
     height: 65px;
     display: flex;
-    justify-content: flex-start; /* Thay đổi từ space-between sang flex-start */
+    justify-content: flex-start;
     align-items: center;
 }
 
@@ -46,14 +71,14 @@ header {
 }
 
 .header-nav {
-    margin-left: 70px; /* Thêm khoảng cách bên trái để đẩy nav sang phải 1 chút */
+    margin-left: 70px;
 }
 
 .header-right {
     display: flex;
     align-items: center;
     gap: 15px;
-    margin-left: auto; /* Tự động đẩy phần bên phải vềสุดขอบ */
+    margin-left: auto;
 }
 
 .header-nav ul {
@@ -61,8 +86,7 @@ header {
     padding: 0;
     list-style: none;
     display: flex;
-    gap: 40px; 
-    margin-left:100px;
+    gap: 40px;
 }
 
 /* --- Định dạng chung cho các liên kết --- */
