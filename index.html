@@ -3,41 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang Web với Nền Động</title>
+    <title>Website với Đồng Hồ</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 <body>
     <header>
         <div class="header-left">
             <a href="#" class="logo">LOGO</a>
         </div>
-
-        <nav class="header-nav">
+        <div class="header-nav">
             <ul>
                 <li><a href="#">Trang chủ</a></li>
                 <li><a href="#">Bạn bè</a></li>
                 <li><a href="#">Nhóm</a></li>
                 <li><a href="#">Bức ảnh thú vị</a></li>
             </ul>
-        </nav>
-
+        </div>
         <div class="header-right">
             <a href="#" class="login-link">Đăng Nhập</a>
-            <a href="#" class="profile-icon" aria-label="Trang cá nhân"><i class="fas fa-user-circle"></i></a>
+            <div class="profile-icon"><i class="fas fa-user"></i></div>
         </div>
     </header>
 
     <div class="video-background">
-        <video autoplay muted loop id="background-video">
+        <video id="background-video" autoplay muted loop>
             <source src="Background/background.mp4" type="video/mp4">
-            <source src="Background/background.webm" type="video/webm">
         </video>
     </div>
 
-    <main class="content">
-        </main>
+    <div class="content">
+        <div class="clock-container">
+            <div id="clock-time"></div>
+            <div id="clock-date"></div>
+            <div id="event-notification"></div>
+            <input type="date" id="birthday-input" placeholder="Nhập ngày sinh nhật">
+        </div>
+    </div>
 
     <script src="script.js"></script>
+    <script src="clock.js"></script>
 </body>
 </html>
